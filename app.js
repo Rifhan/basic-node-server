@@ -12,6 +12,7 @@ const query = {
 /*
     Retweets anything with the included in the hashtags.js file
 */
+//TODO : Deploy in heroku OR Azure and Integrate with Travis CI, implement error handling with email notifications
 function tweetBot(){
     twitter.get('search/tweets',query,(error,data) => {
         if(!error){
