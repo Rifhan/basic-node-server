@@ -1,14 +1,36 @@
 'use strict';
 
 require("babel-core/register");
-var express = require('express');
-var app = express();
-var auth = require('./api/auth');
-var bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
-app.use('/auth',auth());
-
-app.listen(3000, () =>{
-    console.log("server is running");
-});
+const twitter = require('twit')(require('./config/auth'));
+const hashTags = require('./config/hashtags');
+const query = {
+    q : hashTags.hashTags,
+    count : 3,
+    result_type : "recent"
+}
+/*
+    Retweets anything with the included in the hashtags.js file
+*/
+function tweetBot(){
+    twitter.get('search/tweets',query,(error,data) => {
+        if(!error){
+            console.log(data);
+            // tweetID = data.statuses[0].id_str;
+            twitter.post('statuses/retweet/'+data.statuses[0].id_str,{ },(error,response) => {
+                if(response){
+                    console.log("success");
+                }else{
+                    console.log("error retweeting");
+                }
+            });
+        }else{
+            console.log("Error");
+            console.log(error);
+        }
+    });
+}
+// 1000 * 60 * 30 = 30 mins
+setInterval(() => {
+   tweetBot();
+},1000 * 60 * 30);

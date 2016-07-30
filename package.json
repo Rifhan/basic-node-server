@@ -1,7 +1,7 @@
 {
-  "name": "pure-node-server",
+  "name": "basic-node-server",
   "version": "1.0.0",
-  "description": "This is a test practice server with pure node",
+  "description": "This is a test practice server with nodeJS and Express",
   "main": "app.js",
   "scripts": {
     "start": "app.js",
@@ -11,7 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "twit": "^2.2.4"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
