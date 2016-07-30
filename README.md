@@ -1,2 +1,3 @@
-# basic-node-server
-A Basic Node Server for practice and learning purposes 
+# Snowy The Bot @snowy_lka
+Snowy is a Twitter bot currently retweeting #lka and related hastags. 
+<b>Due to upgrade soon</b>
