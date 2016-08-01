@@ -1,7 +1,7 @@
 {
-  "name": "basic-node-server",
+  "name": "snowy-the-bot",
   "version": "1.0.0",
-  "description": "This is a test practice server with nodeJS and Express",
+  "description": "This is a Twitter Bot",
   "main": "app.js",
   "scripts": {
     "start": "app.js",
