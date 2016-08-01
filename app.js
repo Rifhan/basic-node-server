@@ -1,6 +1,7 @@
 'use strict';
 
 require("babel-core/register");
+
 const app = require('express')();
 const twitter = require('twit')(require('./config/auth'));
 const hashTags = require('./config/hashtags');
@@ -34,7 +35,7 @@ function tweetBot(){
 // 1000 * 60 * 30 = 30 mins
 setInterval(() => {
    tweetBot();
-},1000 * 60 * 30);
+},1000 * 60 * 15);
 app.get('/',(req,res) => {
     res.status(200).json({
         "status" : "App Running",
@@ -42,3 +43,7 @@ app.get('/',(req,res) => {
         "description" : "This is a twitter bot"
     });
 })
+
+app.listen(process.env.PORT || 3000, () =>{
+    console.log("server is running");
+});
