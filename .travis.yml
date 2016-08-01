@@ -1,8 +1,8 @@
 language: node_js
 node_js: 
-	- 6.2.2
+- 6.2.2
 deploy: 
-	provider: heroku
-	api_key: 
-		secure: "1b2c079a-edfb-4cac-a450-7ec555c5bc17"
-	app: snowy-the-bot
+      provider: heroku
+      api_key: 
+              secure: "1b2c079a-edfb-4cac-a450-7ec555c5bc17"
+      app: snowy-the-bot
