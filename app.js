@@ -35,7 +35,7 @@ function tweetBot(){
 // 1000 * 60 * 30 = 30 mins
 setInterval(() => {
    tweetBot();
-},1000 * 60 * 15);
+},1000 * 30);
 app.get('/',(req,res) => {
     res.status(200).json({
         "status" : "App Running",
