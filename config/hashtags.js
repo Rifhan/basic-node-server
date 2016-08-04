@@ -1,3 +1,3 @@
 module.exports = {
-    hashTags : ["#lka","LKA","Sri Lanka"]
+    hashTags : ["#lka","#LKA","#SriLanka", "#ComTale"]
 }
