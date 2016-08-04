@@ -36,7 +36,7 @@ module.exports.retweetBot = function() {
         }
     });
 }
-
+/* Tweets trending hashtags twice a day morning and evening WOEID represents the region*/
 module.exports.tweetTrendingHashtags = function(type){
     var trendingData = "";
     var currentDay = new Date().getDay();
