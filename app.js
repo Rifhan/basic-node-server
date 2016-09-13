@@ -38,7 +38,7 @@ scheduler.scheduleJob("*/15 * * * *",()=>{
 //app.use('/tweet',retweet());
 app.get('/',(req,res) => {
     res.status(200).json({
-        "status" : "App Running",
+        "status" : "Application",
         "name" : "snowy the bot",
         "description" : "This is a twitter bot"
     });
