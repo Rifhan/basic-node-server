@@ -39,7 +39,9 @@ app.use(express.static('public'));
 
 //app.use('/tweet',retweet());
 app.get('/',(req,res) => {
+
     res.sendFile('./public/index.html');
+
 })
 
 app.listen(process.env.PORT || 3000, () =>{
